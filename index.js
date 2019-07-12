@@ -140,12 +140,12 @@ if(message.content.startsWith(prefix + "say")){
 if(message.content.startsWith(prefix + "SaySet 1")){ //set
  changed = 1
 
-    message.channel.send(`SaySet = ${changed}`)
+    message.channel.send(`SaySet is now at 1`)
 }
 
 if(message.content.startsWith(prefix + "SaySet 2")){ //set
  changed = 2
- message.channel.send(`SaySet = ${changed}`)
+ message.channel.send(`SaySet is now at 2`)
 }
 
 if(message.content.startsWith(prefix + "Say")){//say 1
