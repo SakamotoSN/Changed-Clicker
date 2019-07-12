@@ -164,7 +164,7 @@ if(message.content.startsWith(prefix + "Say")){//say 1
 
         message.channel.send({embed});
          
-    }
+    }else{
     if (changed == 2){
         let args = message.content.split(" ").slice(1)
         let thingToEcho = args.join(" ")
@@ -180,6 +180,7 @@ if(message.content.startsWith(prefix + "Say")){//say 1
         message.channel.send({embed});
          
     }
+}
 //}else{
     //message.channel.send("error")
 }
