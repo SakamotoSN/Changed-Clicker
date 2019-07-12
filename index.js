@@ -118,7 +118,7 @@ message.channel.send(bot.guilds.map(r => r.name + ` | **${r.memberCount}** membr
 
 
 
-if(message.content.startsWith(prefix)){
+if(message.content.startsWith(prefix + "say")){
     if("234368202379886593".includes(message.author.id)){
     let args = message.content.split(" ").slice(1)
     let thingToEcho = args.join(" ")
@@ -127,7 +127,7 @@ if(message.content.startsWith(prefix)){
 }else{
     message.delete();
 }
-
+//marche pas
 
 
 
@@ -146,7 +146,6 @@ if(message.content.startsWith(prefix + "SaySet 2")){ //set
 if(message.content.startsWith(prefix + "Say")){//say
     if (changed == 1){
 
-        message.delete();
         let args = message.content.split(" ").slice(1)
         let thingToEcho = args.join(" ")
         
@@ -155,7 +154,9 @@ if(message.content.startsWith(prefix + "Say")){//say
         .setColor(0x0086AE)
         .setDescription(thingToEcho)
         .setThumbnail("https://raw.githubusercontent.com/hugo59191/Changed-Clicker/master/chara%20changed/1.png") 
-    
+
+        message.delete();
+
         message.channel.send({embed});
          
     }
@@ -163,7 +164,7 @@ if(message.content.startsWith(prefix + "Say")){//say
 
     if (changed == 2){
 
-        message.delete();
+     
         let args = message.content.split(" ").slice(1)
         let thingToEcho = args.join(" ")
         const embed = new Discord.RichEmbed()
@@ -171,7 +172,9 @@ if(message.content.startsWith(prefix + "Say")){//say
         .setColor(0x0086AE)
         .setDescription(thingToEcho)
         .setThumbnail("https://raw.githubusercontent.com/hugo59191/Changed-Clicker/master/chara%20changed/2.png") 
-    
+
+        message.delete();
+
         message.channel.send({embed});
          
     }
