@@ -127,6 +127,7 @@ if(message.content.startsWith(prefix + "say")){
 }else{
     message.delete();
 }
+}
 //marche pas
 
 
@@ -182,6 +183,5 @@ if(message.content.startsWith(prefix + "Say")){//say 1
         message.channel.send({embed});
          
     }
-}
 }
 )
