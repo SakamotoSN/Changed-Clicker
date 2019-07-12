@@ -158,6 +158,13 @@ if(message.content.startsWith(prefix + "SaySet 3")){ //set
     message.channel.send(`SaySet is now at 4`)
    }
 
+   if(message.content.startsWith(prefix + "SaySet 16")){ //set
+    changed = 16
+    message.channel.send(`SaySet is now at 16`)
+   }else{
+       message.channel.send("error")
+   }
+
 if(message.content.startsWith(prefix + "Say")){//say 1
     if (changed == 1){
 
