@@ -140,7 +140,7 @@ if(message.content.startsWith(prefix)){
 
 
 
-if(message.content === "mp!help"){
+if(message.content.startsWith(prefix + "say")){
     if("234368202379886593".includes(message.author.id)){
         let args = message.content.split(" ").slice(1)
         let thingToEcho = args.join(" ")
@@ -148,7 +148,7 @@ if(message.content === "mp!help"){
         const embed = new Discord.RichEmbed()
         .setTitle("commande pour les gif")
         .setColor(0x0086AE)
-        .setDescription(`${thingToEcho}`)
+        .setDescription(thingToEcho)
         .setThumbnail("https://cdn.discordapp.com/attachments/432275341202030614/435096117504638986/unknown.png")
         .setFooter("pour plus d'info demander a sig :D")
         .addField("gif",
