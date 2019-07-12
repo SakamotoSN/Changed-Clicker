@@ -8,7 +8,7 @@ const client = new Discord.Client();
 const adapter = new FileSync('database.json');
 const db = low(adapter);
 
-
+var changed = 0
 var number_random = 0;
 var prefix = ("CC!")
 var party_launch = false;
@@ -165,7 +165,7 @@ if(message.content.startsWith(prefix + "Say")){//say 1
         message.channel.send({embed});
          
     }else{
-    if (changed == 2){
+        if (changed == 2){
         let args = message.content.split(" ").slice(1)
         let thingToEcho = args.join(" ")
         
