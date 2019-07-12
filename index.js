@@ -25,6 +25,30 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
 
+    //AN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//FR
     if(message.content.startsWith(prefix + "DM")) {
 
         if(message.mentions.users.first()){
@@ -92,6 +116,9 @@ if(message.content == "G-N stop"){
 if (message.content === "sigbot!ServeurListe"){
 message.channel.send(bot.guilds.map(r => r.name + ` | **${r.memberCount}** membres`))
 }
+
+
+
 if(message.content.startsWith(prefix)){
     if("234368202379886593".includes(message.author.id)){
     let args = message.content.split(" ").slice(1)
@@ -101,6 +128,35 @@ if(message.content.startsWith(prefix)){
 }else{
     message.delete();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+if(message.content === "mp!help"){
+    if("234368202379886593".includes(message.author.id)){
+        let args = message.content.split(" ").slice(1)
+        let thingToEcho = args.join(" ")
+        message.delete();
+        const embed = new Discord.RichEmbed()
+    .setTitle("titre")
+    .setColor(0x0086AE)
+    .setDescription(`${thingToEcho}`)
+    .setFooter("en teste")
+
+    message.channel.send({embed});
+          }else{
+        message.delete();
+    }
+    }
+
 }
 }
 )
