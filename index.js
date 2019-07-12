@@ -9,7 +9,7 @@ const adapter = new FileSync('database.json');
 const db = low(adapter);
 
 
-
+var changed = 0
 var number_random = 0;
 var prefix = ("CC!")
 var party_launch = false;
@@ -137,31 +137,43 @@ if(message.content.startsWith(prefix)){
 
 
 
+if(message.content.startsWith(prefix + "SaySet 1")){ //set
+    var changed = 1
+}
+if(message.content.startsWith(prefix + "SaySet 2")){ //set
+    var changed = 2
+}
 
+if(message.content.startsWith(prefix + "Say")){//say
+    if (changed == 1){
 
-
-if(message.content.startsWith(prefix + "say")){
-    if("234368202379886593".includes(message.author.id)){
         let args = message.content.split(" ").slice(1)
         let thingToEcho = args.join(" ")
         message.delete();
         const embed = new Discord.RichEmbed()
-        .setTitle("commande pour les gif")
+        .setTitle("឵឵ ឵឵")
         .setColor(0x0086AE)
         .setDescription(thingToEcho)
-        .setThumbnail("https://cdn.discordapp.com/attachments/432275341202030614/435096117504638986/unknown.png")
-        .setFooter("pour plus d'info demander a sig :D")
-        .addField("gif",
-          "Lucas!KC\nLucas!FTW\Lucas!MrPuel\nLucas!MrPuel")
-          .addField("image",
-          "rien") 
+        .setThumbnail("https://raw.githubusercontent.com/hugo59191/Changed-Clicker/master/chara%20changed/1.png") 
     
         message.channel.send({embed});
-          }else{
-        message.delete();
+         
     }
-    }
+    if (changed == 2){
 
+        let args = message.content.split(" ").slice(1)
+        let thingToEcho = args.join(" ")
+        message.delete();
+        const embed = new Discord.RichEmbed()
+        .setTitle("឵឵ ឵឵")
+        .setColor(0x0086AE)
+        .setDescription(thingToEcho)
+        .setThumbnail("https://raw.githubusercontent.com/hugo59191/Changed-Clicker/master/chara%20changed/2.png") 
+    
+        message.channel.send({embed});
+         
+    }
+}
 }
 }
 )
