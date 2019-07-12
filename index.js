@@ -148,6 +148,16 @@ if(message.content.startsWith(prefix + "SaySet 2")){ //set
  message.channel.send(`SaySet is now at 2`)
 }
 
+if(message.content.startsWith(prefix + "SaySet 3")){ //set
+    changed = 3
+    message.channel.send(`SaySet is now at 3`)
+   }
+
+   if(message.content.startsWith(prefix + "SaySet 4")){ //set
+    changed = 4
+    message.channel.send(`SaySet is now at 4`)
+   }
+
 if(message.content.startsWith(prefix + "Say")){//say 1
     if (changed == 1){
 
@@ -179,10 +189,40 @@ if(message.content.startsWith(prefix + "Say")){//say 1
 
         message.channel.send({embed});
          
+    }else{
+        if (changed == 3){
+        let args = message.content.split(" ").slice(1)
+        let thingToEcho = args.join(" ")
+        
+        const embed = new Discord.RichEmbed()
+        .setTitle("឵឵ ឵឵")
+        .setColor(0x0086AE)
+        .setDescription(thingToEcho)
+        .setThumbnail("https://raw.githubusercontent.com/hugo59191/Changed-Clicker/master/chara%20changed/3.png") 
+
+        message.delete();
+
+        message.channel.send({embed});
+         
+    }else{
+        if (changed == 4){
+        let args = message.content.split(" ").slice(1)
+        let thingToEcho = args.join(" ")
+        
+        const embed = new Discord.RichEmbed()
+        .setTitle("឵឵ ឵឵")
+        .setColor(0x0086AE)
+        .setDescription(thingToEcho)
+        .setThumbnail("https://raw.githubusercontent.com/hugo59191/Changed-Clicker/master/chara%20changed/4.png") 
+
+        message.delete();
+
+        message.channel.send({embed});
+         
     }
 }
-//}else{
-    //message.channel.send("error")
+}
+}
 }
 }
 )
