@@ -137,7 +137,7 @@ if(message.content.startsWith(prefix + "say")){
 
 
 
-if(message.content.startsWith("SaySet 1")){ //set
+if(message.content.startsWith(prefix + "SaySet 1")){ //set
  changed = 1
 
     message.channel.send(`SaySet = ${changed}`)
