@@ -158,8 +158,6 @@ if(message.content.startsWith(prefix + "Say")){//say
     
         message.channel.send({embed});
          
-    }else{
-        message.channel.send("error SaySet =" + changed)
     }
 }
 
@@ -177,8 +175,6 @@ if(message.content.startsWith(prefix + "Say")){//say
         message.channel.send({embed});
          
     }
-}else{
-    message.channel.send("error SaySet =" + changed)
 }
 }
 )
