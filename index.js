@@ -146,12 +146,17 @@ if(message.content === "mp!help"){
         let thingToEcho = args.join(" ")
         message.delete();
         const embed = new Discord.RichEmbed()
-    .setTitle("titre")
-    .setColor(0x0086AE)
-    .setDescription(`${thingToEcho}`)
-    .setFooter("en teste")
-
-    message.channel.send({embed});
+        .setTitle("commande pour les gif")
+        .setColor(0x0086AE)
+        .setDescription(`${thingToEcho}`)
+        .setThumbnail("https://cdn.discordapp.com/attachments/432275341202030614/435096117504638986/unknown.png")
+        .setFooter("pour plus d'info demander a sig :D")
+        .addField("gif",
+          "Lucas!KC\nLucas!FTW\Lucas!MrPuel\nLucas!MrPuel")
+          .addField("image",
+          "rien") 
+    
+        message.channel.send({embed});
           }else{
         message.delete();
     }
