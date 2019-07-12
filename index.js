@@ -180,8 +180,8 @@ if(message.content.startsWith(prefix + "Say")){//say 1
         message.channel.send({embed});
          
     }
-}else{
-    message.channel.send("error")
+//}else{
+    //message.channel.send("error")
 }
 }
 )
