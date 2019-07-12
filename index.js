@@ -8,7 +8,7 @@ const client = new Discord.Client();
 const adapter = new FileSync('database.json');
 const db = low(adapter);
 
-var changed = 2
+var changed = 0
 var number_random = 0;
 var prefix = ("CC!")
 var party_launch = false;
@@ -147,7 +147,7 @@ if(message.content.startsWith(prefix + "SaySet 2")){ //set
  message.channel.send(`SaySet = ${changed}`)
 }
 
-if(message.content.startsWith(prefix + "Say")){//say
+if(message.content.startsWith(prefix + "Say")){//say 1
     if (changed == 1){
 
         let args = message.content.split(" ").slice(1)
@@ -166,7 +166,7 @@ if(message.content.startsWith(prefix + "Say")){//say
     }
 }
 
-    if (changed == 2){
+    if (changed == 2){//say 2
 
      
         let args = message.content.split(" ").slice(1)
