@@ -138,9 +138,11 @@ if(message.content.startsWith(prefix + "say")){
 
 if(message.content.startsWith(prefix + "SaySet 1")){ //set
     var changed = 1
+    message.channel.send("SaySet =" + changed)
 }
 if(message.content.startsWith(prefix + "SaySet 2")){ //set
     var changed = 2
+    message.channel.send("SaySet =" + changed)
 }
 
 if(message.content.startsWith(prefix + "Say")){//say
